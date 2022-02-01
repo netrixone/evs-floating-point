@@ -1,2 +1,0 @@
-build/rom_dec.o: lib_dec/rom_dec.c lib_com/options.h lib_com/cnst.h
-lib_dec/rom_dec.c lib_com/options.h lib_com/cnst.h :

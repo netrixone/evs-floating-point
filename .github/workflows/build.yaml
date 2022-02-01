@@ -1,0 +1,27 @@
+name: Build binaries
+
+on:
+  push:
+
+jobs:
+       
+  build:
+    name: "Build binaries (${{ matrix.os }})"
+    runs-on: "${{ matrix.os }}"
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        
+      - name: Build binary
+        run: make 
+    
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with: 
+          name: "binary-${{ matrix.os }}"
+          path: "./EVS_*"
