@@ -1,0 +1,6 @@
+build/basop_mpy.o: lib_com/basop_mpy.c lib_com/basop_mpy.h lib_com/stl.h \
+  lib_com/typedef.h lib_com/options.h lib_com/basop32.h lib_com/move.h \
+  lib_com/control.h lib_com/enh1632.h lib_com/enh40.h
+lib_com/basop_mpy.c lib_com/basop_mpy.h lib_com/stl.h :
+  lib_com/typedef.h lib_com/options.h lib_com/basop32.h lib_com/move.h :
+  lib_com/control.h lib_com/enh1632.h lib_com/enh40.h :
